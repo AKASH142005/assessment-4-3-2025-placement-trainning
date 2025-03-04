@@ -4,7 +4,6 @@ public class reverse_word {
         String output = reverseWords(a);
         System.out.println(output);
     }
-
     public static String reverseWords(String a) {
         String[] words = a.split(" ");
         StringBuilder reversed = new StringBuilder();
@@ -12,8 +11,8 @@ public class reverse_word {
             reversed.append(words[i]);
             if (i != 0) {
                 reversed.append(" ");
-            }
-        }
+       }
+     }
         return reversed.toString();
     }
 }
