@@ -5,25 +5,23 @@ public class IdentifyCharNum {
         Scanner ss = new Scanner(System.in);
         String s = ss.nextLine();
         StringBuilder result = new StringBuilder();
-
         for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-
-            if (Character.isDigit(ch)) {
-                int count = Character.getNumericValue(ch);
-                // Repeat the last character 'count' times
-                if (result.length() > 0) {
-                    char last = result.charAt(result.length() - 1);
-                    for (int j = 0; j < count - 1; j++) {
-                        result.append(last); // Add the character count-1 times
+          char c = s.charAt(i);
+         if (Character.isDigit(ch)) {
+            int count = Character.getNumericValue(c);
+            if (r.length() > 0) {
+             char last = r.charAt(r.length() - 1);
+                  for (int j = 0; j < count - 1; j++) {
+                 r.append(last);
                     }
                 }
-            } else {
-                result.append(ch); // Add the character to result
+            } 
+        else {
+            r.append(c);
             }
         }
 
-        System.out.println(result.toString());
+        System.out.println(r.toString());
         ss.close();
     }
 }
